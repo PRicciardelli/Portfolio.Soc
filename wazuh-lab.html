@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wazuh SIEM SOC Lab by Patrizio Ricciardelli - Multi-VM security operations centre for attack simulation, log analysis and threat detection.">
+    <meta name="keywords" content="Wazuh, SIEM, SOC, log analysis, threat detection, Patrizio Ricciardelli">
+    <meta name="author" content="Patrizio Ricciardelli">
+    <meta name="theme-color" content="#0d1117">
+    
+    <meta property="og:title" content="Wazuh SIEM SOC Lab | Patrizio Ricciardelli">
+    <meta property="og:description" content="Complete SOC lab with Wazuh, Windows/Linux endpoints and Kali Linux attack simulations.">
+    <meta property="og:type" content="website">
+    
+    <title>Wazuh SIEM SOC Lab | Patrizio Ricciardelli</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🔐</span>
+                <span class="logo-text">Patrizio Ricciardelli</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#certifications" class="nav-link">Certs</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-hero-content reveal">
+                <div class="project-icon-large">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h1 class="project-hero-title">Wazuh SIEM SOC Lab</h1>
+                <p class="project-hero-subtitle">
+                    A complete Security Operations Centre laboratory for real-time monitoring, attack simulation, log analysis and threat detection practice.
+                </p>
+                <div class="project-tags-large">
+                    <span class="project-tag">Wazuh</span>
+                    <span class="project-tag">SIEM</span>
+                    <span class="project-tag">Linux</span>
+                    <span class="project-tag">Windows</span>
+                    <span class="project-tag">Log Analysis</span>
+                    <span class="project-tag">Incident Response</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">01. Overview</span>
+                <h2 class="section-title">Project Goal</h2>
+            </div>
+            
+            <div class="project-grid reveal">
+                <div class="project-main">
+                    <p>
+                        This lab was built to replicate the core functions of a SOC environment. The objective was to deploy a centralised SIEM, collect logs from multiple endpoints, simulate realistic attacks, and practise alert triage, investigation and response.
+                    </p>
+                    <p>
+                        The environment combines a Wazuh server with Windows and Linux agents, plus a Kali Linux attacker VM to generate malicious telemetry in a safe, isolated network.
+                    </p>
+                    
+                    <div class="info-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <strong>Learning Outcome</strong>
+                            <p>Practical experience with SIEM architecture, agent deployment, Windows/Linux log analysis, custom rule creation and incident triage workflows.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Lab Components</h3>
+                        <ul class="sidebar-list">
+                            <li><i class="fas fa-server"></i> Ubuntu Server 22.04</li>
+                            <li><i class="fas fa-database"></i> Wazuh Manager + Indexer</li>
+                            <li><i class="fas fa-chart-line"></i> Wazuh Dashboard</li>
+                            <li><i class="fab fa-windows"></i> Windows 10 Endpoint</li>
+                            <li><i class="fab fa-linux"></i> Kali Linux Attacker</li>
+                            <li><i class="fas fa-hdd"></i> VMware Workstation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">02. Components</span>
+                <h2 class="section-title">Lab Infrastructure</h2>
+            </div>
+            
+            <div class="components-grid reveal">
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Ubuntu Server 22.04</h3>
+                    <p>Host for the Wazuh manager, indexer and dashboard, providing centralised log storage and alerting.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Wazuh Manager</h3>
+                    <p>Collects, decodes and analyses security events from all agents using rules and decoders.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Wazuh Indexer</h3>
+                    <p>Stores and indexes incoming logs for fast searching, correlation and dashboard visualisation.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Wazuh Dashboard</h3>
+                    <p>Web interface for querying logs, reviewing alerts and creating custom security dashboards.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Windows 10 Endpoint</h3>
+                    <p>Monitored agent generating Windows Event Logs, Sysmon telemetry and file integrity alerts.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Kali Linux VM</h3>
+                    <p>Attacker platform used to run brute-force, reconnaissance and malware simulation exercises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">03. Architecture</span>
+                <h2 class="section-title">How the Lab Works</h2>
+            </div>
+            
+            <div class="architecture-diagram reveal">
+                <div class="arch-step">
+                    <div class="arch-number">1</div>
+                    <h3>Deploy</h3>
+                    <p>Installed Wazuh server components on Ubuntu: manager, indexer and dashboard.</p>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="arch-step">
+                    <div class="arch-number">2</div>
+                    <h3>Agent Install</h3>
+                    <p>Deployed Wazuh agents on Windows and Linux endpoints for log collection.</p>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="arch-step">
+                    <div class="arch-number">3</div>
+                    <h3>Simulate Attacks</h3>
+                    <p>Ran brute-force, recon and malware tests from Kali to generate telemetry.</p>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="arch-step">
+                    <div class="arch-number">4</div>
+                    <h3>Analyse & Tune</h3>
+                    <p>Reviewed alerts, created custom rules and built dashboards for visibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attack Simulations -->
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">04. Attack Simulations</span>
+                <h2 class="section-title">Scenarios Practised</h2>
+            </div>
+            
+            <div class="tasks-grid reveal">
+                <div class="task-card">
+                    <div class="task-number">01</div>
+                    <h3>Brute Force Attack</h3>
+                    <p>Simulated SSH and RDP brute-force attempts to generate authentication failure alerts and observe lockout behaviour.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">02</div>
+                    <h3>Network Reconnaissance</h3>
+                    <p>Used Nmap and ping sweeps from Kali to trigger network discovery alerts and analyse scanning patterns.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">03</div>
+                    <h3>Malware Test</h3>
+                    <p>Deployed safe, controlled malware samples (e.g. EICAR) to test file integrity monitoring and antivirus integration.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">04</div>
+                    <h3>Privilege Escalation</h3>
+                    <p>Practised detecting suspicious command execution and permission changes on Linux and Windows endpoints.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">05</div>
+                    <h3>Lateral Movement</h3>
+                    <p>Simulated SMB/RDP connections between lab VMs to identify anomalous authentication and network flows.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">06</div>
+                    <h3>Data Exfiltration</h3>
+                    <p>Generated outbound traffic patterns to practise detecting unusual volume or destination anomalies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks Performed -->
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">05. Tasks Performed</span>
+                <h2 class="section-title">What I Did</h2>
+            </div>
+            
+            <div class="takeaways reveal">
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Full Wazuh Installation</h3>
+                        <p>Installed and configured Wazuh manager, indexer and dashboard on Ubuntu Server 22.04.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Agent Deployment</h3>
+                        <p>Configured Wazuh agents on Windows 10 and Linux endpoints with correct groups and policies.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Custom Rules</h3>
+                        <p>Created custom detection rules for specific attack scenarios and reduced false positives.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Dashboards</h3>
+                        <p>Built custom dashboards in Wazuh for authentication, malware, network and endpoint visibility.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Log Analysis</h3>
+                        <p>Analysed Windows Event Logs, Sysmon, Linux audit logs and file integrity events.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Alert Tuning</h3>
+                        <p>Tuned rule severity, thresholds and whitelists to focus on actionable alerts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">06. Key Takeaways</span>
+                <h2 class="section-title">What I Learned</h2>
+            </div>
+            
+            <div class="project-grid reveal">
+                <div class="project-main">
+                    <p>
+                        Building this lab gave me end-to-end exposure to SOC operations. I learned how telemetry flows from endpoints to a SIEM, how rules turn raw logs into alerts, and how analysts prioritise and investigate those alerts.
+                    </p>
+                    <p>
+                        The most valuable lesson was understanding the difference between <strong>noise and signal</strong>: without tuning, a SIEM generates overwhelming alerts. Effective detection requires knowing your environment, your assets and your adversaries.
+                    </p>
+                    <ul class="timeline-list" style="margin-top: 20px;">
+                        <li>Deployed a complete SIEM stack from scratch</li>
+                        <li>Correlated events across Windows and Linux systems</li>
+                        <li>Created custom detection rules for lab-specific scenarios</li>
+                        <li>Practised incident triage and documentation</li>
+                        <li>Understood the MITRE ATT&CK mapping of common alerts</li>
+                    </ul>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>MITRE ATT&CK Mapping</h3>
+                        <ul class="sidebar-list">
+                            <li><i class="fas fa-bug"></i> T1110 — Brute Force</li>
+                            <li><i class="fas fa-bug"></i> T1046 — Network Service Discovery</li>
+                            <li><i class="fas fa-bug"></i> T1204 — User Execution</li>
+                            <li><i class="fas fa-bug"></i> T1068 — Exploitation for Privilege Escalation</li>
+                            <li><i class="fas fa-bug"></i> T1021 — Remote Services</li>
+                            <li><i class="fas fa-bug"></i> T1041 — Exfiltration Over C2 Channel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">07. Resources</span>
+                <h2 class="section-title">Useful Links</h2>
+            </div>
+            
+            <div class="resources-grid reveal">
+                <a href="https://wazuh.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h3>Wazuh Official</h3>
+                        <p>Open-source SIEM and XDR platform.</p>
+                    </div>
+                </a>
+                
+                <a href="https://documentation.wazuh.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-book"></i>
+                    <div>
+                        <h3>Wazuh Documentation</h3>
+                        <p>Installation, configuration and rule development guides.</p>
+                    </div>
+                </a>
+                
+                <a href="https://wazuh.com/downloads/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-download"></i>
+                    <div>
+                        <h3>Wazuh Downloads</h3>
+                        <p>Download the latest Wazuh server and agents.</p>
+                    </div>
+                </a>
+                
+                <a href="https://attack.mitre.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>MITRE ATT&CK</h3>
+                        <p>Global knowledge base of adversary tactics and techniques.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="section project-cta">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>Explore More Projects</h2>
+                <p>See my Pwnagotchi build, network analysis and wireless security work.</p>
+                <a href="index.html#projects" class="btn btn-primary">
+                    <i class="fas fa-th-large"></i> View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🔐</span>
+                    <span>Patrizio Ricciardelli</span>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/PRicciardelli" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://tryhackme.com/p/Payrick" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe"><i class="fas fa-shield-alt"></i></a>
+                    <a href="mailto:patrizio.ricciardelli@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Patrizio Ricciardelli. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

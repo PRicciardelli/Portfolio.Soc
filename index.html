@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patrizio Ricciardelli - Junior SOC Analyst, IT Support and Cybersecurity Portfolio. CompTIA A+, Network+, Security+ certified. Home labs, SIEM, networking and threat detection.">
+    <meta name="keywords" content="Patrizio Ricciardelli, cybersecurity, SOC analyst, IT support, CompTIA, Wazuh, TryHackMe, portfolio">
+    <meta name="author" content="Patrizio Ricciardelli">
+    <meta name="theme-color" content="#0d1117">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Patrizio Ricciardelli | Cybersecurity Portfolio">
+    <meta property="og:description" content="Junior SOC Analyst | IT Support | Cybersecurity Enthusiast - CompTIA A+, Network+, Security+">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pricciardelli.github.io">
+    <meta property="og:image" content="https://pricciardelli.github.io/assets/og-image.png">
+    
+    <title>Patrizio Ricciardelli | Cybersecurity Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🔐</span>
+                <span class="logo-text">Patrizio Ricciardelli</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certs</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="status-dot"></span>
+                    Open to SOC Analyst opportunities
+                </div>
+                
+                <h1 class="hero-title reveal">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">Patrizio Ricciardelli</span>
+                </h1>
+                
+                <div class="hero-roles reveal">
+                    <span class="role">Junior SOC Analyst</span>
+                    <span class="role-separator">|</span>
+                    <span class="role">IT Support</span>
+                    <span class="role-separator">|</span>
+                    <span class="role">Cybersecurity Enthusiast</span>
+                </div>
+                
+                <p class="hero-description reveal">
+                    CompTIA A+, Network+ and Security+ certified professional with 11+ years of hands-on IT support experience and 13+ years of leadership in fast-paced operational environments. I build security labs, analyse logs and hunt threats.
+                </p>
+                
+                <div class="hero-actions reveal">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                    <a href="assets/Patrizio_Ricciardelli_CV.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-file-download"></i>
+                        Download CV
+                    </a>
+                </div>
+                
+                <div class="hero-socials reveal">
+                    <a href="https://github.com/PRicciardelli" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://tryhackme.com/p/Payrick" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe">
+                        <i class="fas fa-shield-alt"></i>
+                    </a>
+                    <a href="mailto:patrizio.ricciardelli@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot red"></div>
+                        <div class="terminal-dot yellow"></div>
+                        <div class="terminal-dot green"></div>
+                        <span class="terminal-title">patrizio@soc-lab:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="terminal-line output">
+                            patrizio.ricciardelli — aspiring SOC analyst
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">cat certifications.txt</span>
+                        </div>
+                        <div class="terminal-line output">
+                            CompTIA A+ | Network+ | Security+<br>
+                            CEH (in progress) | SC-200 (in progress)
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">nmap -sV target.lab</span>
+                        </div>
+                        <div class="terminal-line output">
+                            Scanning... 22/tcp open ssh<br>
+                            80/tcp open http<br>
+                            443/tcp open https
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">CompTIA Certs</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="stat-number" data-target="6">0</div>
+                    <div class="stat-label">Security Labs</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Team Size Led</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">01. About</span>
+                <h2 class="section-title">From IT Support to Cybersecurity</h2>
+                <p class="section-subtitle">A hands-on journey of continuous learning and practical security.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <p>
+                        I started my career in IT support and systems administration, spending <strong>11 years</strong> troubleshooting hardware, software and network issues across Windows and mixed environments. That foundation gave me a deep understanding of how systems break — and how to fix them.
+                    </p>
+                    <p>
+                        Over the last <strong>13 years</strong>, I led teams of 50+ people in high-pressure hospitality operations, sharpening my incident management, prioritisation and communication skills. Today, I'm channelling that experience into cybersecurity, with a focus on <strong>SOC operations, threat detection and log analysis</strong>.
+                    </p>
+                    <p>
+                        I learn by building: Wazuh SIEM labs, Kali Linux attack simulations, network traffic analysis with Wireshark, and wireless security projects with Flipper Zero and Pwnagotchi.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CompTIA A+, Network+, Security+ certified</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Hands-on SIEM, log analysis and incident response</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Strong troubleshooting and stakeholder communication</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Based in Stratford-upon-Avon, UK</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual reveal">
+                    <div class="about-card">
+                        <div class="about-card-header">
+                            <i class="fas fa-terminal"></i>
+                            <span>Active Learning</span>
+                        </div>
+                        <ul class="about-list">
+                            <li><i class="fas fa-angle-right"></i> TryHackMe SOC Path</li>
+                            <li><i class="fas fa-angle-right"></i> MITRE ATT&CK framework</li>
+                            <li><i class="fas fa-angle-right"></i> Wazuh SIEM tuning</li>
+                            <li><i class="fas fa-angle-right"></i> Network forensics</li>
+                            <li><i class="fas fa-angle-right"></i> Wireless security testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">02. Experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">A blend of technical support, operational leadership and incident management.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Deputy Manager</h3>
+                            <span class="timeline-company">Miller & Carter, Resorts World Birmingham</span>
+                            <span class="timeline-date">2019 – 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Led daily operations for a <strong>50+ person team</strong> over <strong>6+ years</strong> in a high-volume environment.</li>
+                            <li>Managed escalations and coordinated incident responses under pressure — directly transferable to IT incident management.</li>
+                            <li>Mentored and trained team members, improving accountability, performance and operational efficiency.</li>
+                            <li>Maintained high customer satisfaction while resolving complex, time-sensitive problems.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Assistant Manager</h3>
+                            <span class="timeline-company">Hotel du Vin, Stratford-upon-Avon</span>
+                            <span class="timeline-date">2018 – 2019</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Coordinated front-of-house and back-of-house operations for <strong>1 year</strong>.</li>
+                            <li>Strengthened communication, stakeholder management and problem-solving capabilities.</li>
+                            <li>Supported staff training and performance improvement initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Duty Manager</h3>
+                            <span class="timeline-company">ASK Italian, Moreton-in-Marsh</span>
+                            <span class="timeline-date">2017 – 2018</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Supervised daily operations, staffing, stock management and compliance for <strong>1 year</strong>.</li>
+                            <li>Ensured consistent operational and service standards across shifts.</li>
+                            <li>Developed strong organisational, multitasking and prioritisation skills.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Assistant Manager</h3>
+                            <span class="timeline-company">Côte Brasserie, London</span>
+                            <span class="timeline-date">2013 – 2017</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Managed high-volume service delivery and team performance for <strong>4 years</strong>.</li>
+                            <li>Contributed to staff training and adherence to company standards.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>IT Support / Helpdesk & Systems and Networking Specialist</h3>
+                            <span class="timeline-company">NEXSOFT S.p.A., Salerno, Italy</span>
+                            <span class="timeline-date">2009 – 2013</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Delivered <strong>1st/2nd line technical support</strong> for <strong>4 years</strong> across Windows and mixed environments.</li>
+                            <li>Configured, maintained and troubleshot computer systems, peripherals and network infrastructure.</li>
+                            <li>Investigated connectivity, TCP/IP, DNS and DHCP issues, reducing user downtime.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>IT Support Technician</h3>
+                            <span class="timeline-company">4Business, Italy</span>
+                            <span class="timeline-date">2002 – 2009</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Performed hardware and software troubleshooting across Windows environments for <strong>7 years</strong>.</li>
+                            <li>Installed, configured and maintained desktops, peripherals and applications.</li>
+                            <li>Supported network connectivity and TCP/IP configuration for end users.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">03. Skills</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <p class="section-subtitle">Tools, platforms and methodologies I use every day.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersecurity & SOC</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">Security Monitoring</span>
+                            <div class="skill-progress" data-width="80"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Threat Detection</span>
+                            <div class="skill-progress" data-width="75"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Log Analysis</span>
+                            <div class="skill-progress" data-width="78"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Incident Response</span>
+                            <div class="skill-progress" data-width="70"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Networking</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">TCP/IP & DNS/DHCP</span>
+                            <div class="skill-progress" data-width="85"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Wireshark</span>
+                            <div class="skill-progress" data-width="80"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Nmap</span>
+                            <div class="skill-progress" data-width="82"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">VPN / Wireless</span>
+                            <div class="skill-progress" data-width="75"><div class="skill-fill"></div></div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Platforms & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Windows 10/11</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Kali Linux</span>
+                        <span class="skill-tag">macOS</span>
+                        <span class="skill-tag">Wazuh SIEM</span>
+                        <span class="skill-tag">Splunk</span>
+                        <span class="skill-tag">VMware</span>
+                        <span class="skill-tag">VirtualBox</span>
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">Microsoft 365</span>
+                        <span class="skill-tag">Command Line</span>
+                        <span class="skill-tag">OpenWRT</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-bug"></i>
+                        <h3>Security Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MITRE ATT&CK</span>
+                        <span class="skill-tag">Incident Prioritisation</span>
+                        <span class="skill-tag">BCDR</span>
+                        <span class="skill-tag">Risk Awareness</span>
+                        <span class="skill-tag">Vulnerability Management</span>
+                        <span class="skill-tag">Security Controls</span>
+                        <span class="skill-tag">Backup & Recovery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">04. Projects</span>
+                <h2 class="section-title">Security Labs & Projects</h2>
+                <p class="section-subtitle">Hands-on work that demonstrates real cybersecurity skills.</p>
+            </div>
+            
+            <div class="project-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="soc">SOC / SIEM</button>
+                <button class="filter-btn" data-filter="network">Network</button>
+                <button class="filter-btn" data-filter="wireless">Wireless</button>
+                <button class="filter-btn" data-filter="embedded">Embedded</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card reveal" data-category="soc">
+                    <div class="project-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Wazuh</span>
+                            <span class="project-tag">SIEM</span>
+                            <span class="project-tag">Linux</span>
+                        </div>
+                        <h3>Wazuh SIEM SOC Lab</h3>
+                        <p>Built a multi-VM SOC environment with Wazuh for log ingestion, alert tuning, endpoint monitoring and attack simulation.</p>
+                        <ul class="project-outcomes">
+                            <li>Configured agents on Windows and Linux endpoints</li>
+                            <li>Practised alert triage and false-positive tuning</li>
+                            <li>Simulated attacks to validate detection rules</li>
+                        </ul>
+                        <a href="wazuh-lab.html" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="network">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Wireshark</span>
+                            <span class="project-tag">TCP/IP</span>
+                            <span class="project-tag">Forensics</span>
+                        </div>
+                        <h3>Network Traffic Analysis</h3>
+                        <p>Analysed network captures to identify suspicious packets, DNS tunneling attempts, ARP spoofing and anomalous protocol behaviour.</p>
+                        <ul class="project-outcomes">
+                            <li>Detected and documented suspicious DNS queries</li>
+                            <li>Identified ARP spoofing patterns</li>
+                            <li>Built protocol inspection checklists</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="wireless">
+                    <div class="project-image">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Flipper Zero</span>
+                            <span class="project-tag">RF Analysis</span>
+                            <span class="project-tag">WPA/WPA2</span>
+                        </div>
+                        <h3>Wireless Security Lab</h3>
+                        <p>Explored WiFi security, RF signal analysis, WPA2 handshake capture and home network auditing in isolated lab environments.</p>
+                        <ul class="project-outcomes">
+                            <li>Captured and analysed WiFi handshakes</li>
+                            <li>Audited home network for weak configurations</li>
+                            <li>Documented wireless attack vectors</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="network">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Nmap</span>
+                            <span class="project-tag">Enumeration</span>
+                            <span class="project-tag">Recon</span>
+                        </div>
+                        <h3>Network Scanning & Reconnaissance</h3>
+                        <p>Performed service discovery, OS fingerprinting, port enumeration and reconnaissance aligned with SOC Analyst workflows.</p>
+                        <ul class="project-outcomes">
+                            <li>Created scanning playbooks for common scenarios</li>
+                            <li>Practised stealth and full-connect scans</li>
+                            <li>Correlated scan results with threat intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="embedded">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Raspberry Pi</span>
+                            <span class="project-tag">Bettercap</span>
+                            <span class="project-tag">Linux</span>
+                        </div>
+                        <h3>Pwnagotchi Build</h3>
+                        <p>Built a Pwnagotchi device for wireless-networking experimentation and hands-on learning with embedded Linux.</p>
+                        <ul class="project-outcomes">
+                            <li>Configured Bettercap and plugins</li>
+                            <li>Learned about WiFi beaconing and handshakes</li>
+                            <li>Documented the build process</li>
+                        </ul>
+                        <a href="pwnagotchi.html" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="wireless">
+                    <div class="project-image">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">OpenWRT</span>
+                            <span class="project-tag">GL.iNet</span>
+                            <span class="project-tag">Networking</span>
+                        </div>
+                        <h3>GL.iNet Security Router Lab</h3>
+                        <p>Configured a custom OpenWRT-based router for wireless security testing, network segmentation and traffic inspection.</p>
+                        <ul class="project-outcomes">
+                            <li>Set up VLANs and firewall rules</li>
+                            <li>Configured VPN and DNS filtering</li>
+                            <li>Isolated lab traffic from production network</li>
+                        </ul>
+                        <a href="glinet.html" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Lab Section -->
+    <section class="section homelab" id="homelab">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">05. Home Lab</span>
+                <h2 class="section-title">My SOC Lab Environment</h2>
+                <p class="section-subtitle">The virtual and physical tools I use to practise defensive security.</p>
+            </div>
+            
+            <div class="lab-diagram reveal">
+                <div class="lab-node lab-core">
+                    <i class="fas fa-server"></i>
+                    <span>Ubuntu Server</span>
+                    <small>Wazuh SIEM</small>
+                </div>
+                <div class="lab-connections">
+                    <div class="lab-line"></div>
+                    <div class="lab-line"></div>
+                    <div class="lab-line"></div>
+                </div>
+                <div class="lab-endpoints">
+                    <div class="lab-node">
+                        <i class="fab fa-windows"></i>
+                        <span>Windows 10</span>
+                        <small>Endpoint</small>
+                    </div>
+                    <div class="lab-node">
+                        <i class="fab fa-linux"></i>
+                        <span>Kali Linux</span>
+                        <small>Attacker VM</small>
+                    </div>
+                    <div class="lab-node">
+                        <i class="fas fa-wifi"></i>
+                        <span>GL.iNet</span>
+                        <small>OpenWRT Lab</small>
+                    </div>
+                    <div class="lab-node">
+                        <i class="fas fa-robot"></i>
+                        <span>Pwnagotchi</span>
+                        <small>Wireless Lab</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lab-tools reveal">
+                <div class="lab-tool"><i class="fas fa-check"></i> VMware Workstation</div>
+                <div class="lab-tool"><i class="fas fa-check"></i> VirtualBox</div>
+                <div class="lab-tool"><i class="fas fa-check"></i> Wazuh SIEM</div>
+                <div class="lab-tool"><i class="fas fa-check"></i> Flipper Zero</div>
+                <div class="lab-tool"><i class="fas fa-check"></i> Custom GL.iNet Router</div>
+                <div class="lab-tool"><i class="fas fa-check"></i> Isolated Test Network</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MITRE Section -->
+    <section class="section mitre" id="mitre">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">06. MITRE ATT&CK</span>
+                <h2 class="section-title">Detection Experience</h2>
+                <p class="section-subtitle">Techniques I've studied and practised in lab environments.</p>
+            </div>
+            
+            <div class="mitre-grid">
+                <div class="mitre-card reveal">
+                    <div class="mitre-id">T1078</div>
+                    <h3>Valid Accounts</h3>
+                    <p>Credential abuse detection and account anomaly monitoring.</p>
+                </div>
+                <div class="mitre-card reveal">
+                    <div class="mitre-id">T1046</div>
+                    <h3>Network Service Discovery</h3>
+                    <p>Detection of network scanning and reconnaissance activity.</p>
+                </div>
+                <div class="mitre-card reveal">
+                    <div class="mitre-id">T1040</div>
+                    <h3>Network Sniffing</h3>
+                    <p>Packet capture, traffic inspection and protocol analysis.</p>
+                </div>
+                <div class="mitre-card reveal">
+                    <div class="mitre-id">T1001</div>
+                    <h3>Data Obfuscation</h3>
+                    <p>Identifying DNS tunneling and command-and-control channels.</p>
+                </div>
+                <div class="mitre-card reveal">
+                    <div class="mitre-id">T1204</div>
+                    <h3>User Execution</h3>
+                    <p>Phishing and malicious attachment awareness and triage.</p>
+                </div>
+                <div class="mitre-card reveal">
+                    <div class="mitre-id">T1059</div>
+                    <h3>Command & Scripting Interpreter</h3>
+                    <p>PowerShell and command-line anomaly detection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">07. Certifications</span>
+                <h2 class="section-title">Credentials & Learning</h2>
+                <p class="section-subtitle">Earned and in-progress certifications.</p>
+            </div>
+            
+            <div class="certs-grid">
+                <div class="cert-card reveal earned">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Earned</div>
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>CompTIA A+</h3>
+                    <span class="cert-date">January 2026</span>
+                    <p>Hardware, software, networking and troubleshooting fundamentals.</p>
+                </div>
+                
+                <div class="cert-card reveal earned">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Earned</div>
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>CompTIA Network+</h3>
+                    <span class="cert-date">April 2026</span>
+                    <p>Networking concepts, infrastructure, operations and security.</p>
+                </div>
+                
+                <div class="cert-card reveal earned">
+                    <div class="cert-status"><i class="fas fa-check-circle"></i> Earned</div>
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>CompTIA Security+</h3>
+                    <span class="cert-date">August 2026</span>
+                    <p>Core cybersecurity skills, risk management and incident response.</p>
+                </div>
+                
+                <div class="cert-card reveal progress">
+                    <div class="cert-status"><i class="fas fa-spinner"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-user-secret"></i></div>
+                    <h3>Certified Ethical Hacker (CEH)</h3>
+                    <span class="cert-date">EC-Council</span>
+                    <p>Ethical hacking methodologies and penetration testing concepts.</p>
+                </div>
+                
+                <div class="cert-card reveal progress">
+                    <div class="cert-status"><i class="fas fa-spinner"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Microsoft SC-200</h3>
+                    <span class="cert-date">Security Operations Analyst</span>
+                    <p>Microsoft Sentinel, Defender XDR and SOC operations.</p>
+                </div>
+                
+                <div class="cert-card reveal progress">
+                    <div class="cert-status"><i class="fas fa-spinner"></i> In Progress</div>
+                    <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>TryHackMe SOC Path</h3>
+                    <span class="cert-date">Active Learning</span>
+                    <p>Practical SOC Analyst training with hands-on labs.</p>
+                </div>
+            </div>
+            
+            <div class="tryhackme reveal">
+                <h3>TryHackMe Progress</h3>
+                <p>Active cybersecurity training and SOC-focused labs.</p>
+                <img src="https://tryhackme-badges.s3.amazonaws.com/Payrick.png" alt="TryHackMe Badge" class="thm-badge">
+                <a href="https://tryhackme.com/p/Payrick" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    View TryHackMe Profile <i class="fas fa-external-link-alt"></i>
+                </a>
+                <p class="note"><i class="fas fa-info-circle"></i> Badge updates automatically from TryHackMe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">08. Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Open to SOC Analyst, IT Support and Cybersecurity opportunities.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:patrizio.ricciardelli@gmail.com">patrizio.ricciardelli@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Stratford-upon-Avon, United Kingdom</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-id-card"></i>
+                        <div>
+                            <h3>Driving Licence</h3>
+                            <p>Full UK Driving Licence (A & B)</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-download"></i>
+                        <div>
+                            <h3>CV</h3>
+                            <a href="assets/Patrizio_Ricciardelli_CV.pdf" download>Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form" id="contact-form" action="mailto:patrizio.ricciardelli@gmail.com" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Job opportunity / Collaboration">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🔐</span>
+                    <span>Patrizio Ricciardelli</span>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/PRicciardelli" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://tryhackme.com/p/Payrick" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe"><i class="fas fa-shield-alt"></i></a>
+                    <a href="mailto:patrizio.ricciardelli@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Patrizio Ricciardelli. All rights reserved.</p>
+                <p class="footer-note">Built with HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

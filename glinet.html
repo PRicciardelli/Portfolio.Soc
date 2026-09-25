@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GL.iNet Security Router Lab by Patrizio Ricciardelli - OpenWRT-based wireless security platform.">
+    <meta name="author" content="Patrizio Ricciardelli">
+    <meta name="theme-color" content="#0d1117">
+    <meta property="og:title" content="GL.iNet Security Router Lab | Patrizio Ricciardelli">
+    <meta property="og:description" content="Custom OpenWRT router lab for network segmentation, VPN and wireless security testing.">
+    <title>GL.iNet Security Router Lab | Patrizio Ricciardelli</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🔐</span>
+                <span class="logo-text">Patrizio Ricciardelli</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#certifications" class="nav-link">Certs</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu"><span class="hamburger"></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <div class="project-hero-content reveal">
+                <div class="project-icon-large"><i class="fas fa-wifi"></i></div>
+                <h1 class="project-hero-title">GL.iNet Security Lab</h1>
+                <p class="project-hero-subtitle">A custom OpenWRT-based wireless security platform for network segmentation, traffic inspection and isolated lab testing.</p>
+                <div class="project-tags-large">
+                    <span class="project-tag">OpenWRT</span>
+                    <span class="project-tag">Networking</span>
+                    <span class="project-tag">VPN</span>
+                    <span class="project-tag">Firewall</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">01. Overview</span>
+                <h2 class="section-title">Project Goal</h2>
+            </div>
+            <div class="project-grid reveal">
+                <div class="project-main">
+                    <p>The GL.iNet router was repurposed as a dedicated security lab gateway. The goal was to create an isolated network segment for wireless experiments while keeping the production network safe.</p>
+                    <p>This project reinforced practical networking skills: VLANs, firewall zones, DNS filtering, VPN routing and wireless access point management.</p>
+                    <div class="info-box"><i class="fas fa-shield-alt"></i><div><strong>Security First</strong><p>The lab network is fully isolated from the home production network to prevent accidental impact.</p></div></div>
+                </div>
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Router Features</h3>
+                        <ul class="sidebar-list">
+                            <li><i class="fas fa-network-wired"></i> VLAN Segmentation</li>
+                            <li><i class="fas fa-fire"></i> Firewall Zones</li>
+                            <li><i class="fas fa-globe"></i> VPN Client/Server</li>
+                            <li><i class="fas fa-filter"></i> DNS Filtering</li>
+                            <li><i class="fas fa-wifi"></i> Guest WiFi Lab</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">02. Configuration</span><h2 class="section-title">What I Configured</h2></div>
+            <div class="tasks-grid reveal">
+                <div class="task-card"><div class="task-number">01</div><h3>OpenWRT Flash</h3><p>Flashed the router with OpenWRT firmware for full control over networking stack.</p></div>
+                <div class="task-card"><div class="task-number">02</div><h3>VLANs</h3><p>Created separate VLANs for lab devices, management and guest access.</p></div>
+                <div class="task-card"><div class="task-number">03</div><h3>Firewall</h3><p>Set up zone-based firewall rules to isolate lab traffic from trusted network.</p></div>
+                <div class="task-card"><div class="task-number">04</div><h3>VPN</h3><p>Configured WireGuard client for secure remote access to the lab.</p></div>
+                <div class="task-card"><div class="task-number">05</div><h3>DNS Filtering</h3><p>Deployed AdGuard Home for DNS-level filtering and query logging.</p></div>
+                <div class="task-card"><div class="task-number">06</div><h3>Monitoring</h3><p>Enabled traffic logging and bandwidth monitoring for analysis.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">03. Skills Practised</span><h2 class="section-title">Key Takeaways</h2></div>
+            <div class="takeaways reveal">
+                <div class="takeaway-card"><i class="fas fa-check-circle"></i><div><h3>Network Segmentation</h3><p>Practical experience designing secure network zones and routing policies.</p></div></div>
+                <div class="takeaway-card"><i class="fas fa-check-circle"></i><div><h3>OpenWRT Administration</h3><p>Learned UCI command-line configuration, package management and troubleshooting.</p></div></div>
+                <div class="takeaway-card"><i class="fas fa-check-circle"></i><div><h3>VPN Routing</h3><p>Configured split tunneling and full-tunnel VPN policies for lab access.</p></div></div>
+                <div class="takeaway-card"><i class="fas fa-check-circle"></i><div><h3>DNS Security</h3><p>Implemented DNS filtering and query logging for visibility.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">04. Resources</span><h2 class="section-title">Useful Links</h2></div>
+            <div class="resources-grid reveal">
+                <a href="https://openwrt.org/" target="_blank" rel="noopener noreferrer" class="resource-card"><i class="fas fa-globe"></i><div><h3>OpenWRT</h3><p>Open-source router firmware and documentation.</p></div></a>
+                <a href="https://www.glinet.com/" target="_blank" rel="noopener noreferrer" class="resource-card"><i class="fas fa-wifi"></i><div><h3>GL.iNet</h3><p>Travel routers and OpenWRT-compatible hardware.</p></div></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section project-cta">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>Explore More Projects</h2>
+                <p>See my Wazuh SIEM lab, Pwnagotchi build and network analysis work.</p>
+                <a href="index.html#projects" class="btn btn-primary"><i class="fas fa-th-large"></i> View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand"><span class="logo-icon">🔐</span><span>Patrizio Ricciardelli</span></div>
+                <div class="footer-socials">
+                    <a href="https://github.com/PRicciardelli" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://tryhackme.com/p/Payrick" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe"><i class="fas fa-shield-alt"></i></a>
+                    <a href="mailto:patrizio.ricciardelli@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Patrizio Ricciardelli. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+</html>

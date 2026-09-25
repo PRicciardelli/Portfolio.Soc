@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pwnagotchi build project by Patrizio Ricciardelli - Raspberry Pi Zero W wireless security lab for handshake capture and WiFi analysis.">
+    <meta name="keywords" content="Pwnagotchi, Raspberry Pi, Bettercap, wireless security, handshake capture, Patrizio Ricciardelli">
+    <meta name="author" content="Patrizio Ricciardelli">
+    <meta name="theme-color" content="#0d1117">
+    
+    <meta property="og:title" content="Pwnagotchi Build | Patrizio Ricciardelli">
+    <meta property="og:description" content="Embedded Linux wireless security lab built with Raspberry Pi Zero W and Pwnagotchi.">
+    <meta property="og:type" content="website">
+    
+    <title>Pwnagotchi Build | Patrizio Ricciardelli</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🔐</span>
+                <span class="logo-text">Patrizio Ricciardelli</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#certifications" class="nav-link">Certs</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-hero-content reveal">
+                <div class="project-icon-large">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="project-hero-title">Pwnagotchi Build</h1>
+                <p class="project-hero-subtitle">
+                    A self-contained, embedded Linux wireless security lab for passive WiFi monitoring, handshake capture and hands-on RF analysis.
+                </p>
+                <div class="project-tags-large">
+                    <span class="project-tag">Raspberry Pi</span>
+                    <span class="project-tag">Bettercap</span>
+                    <span class="project-tag">Linux</span>
+                    <span class="project-tag">Wireless Security</span>
+                    <span class="project-tag">RF Analysis</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">01. Overview</span>
+                <h2 class="section-title">What is a Pwnagotchi?</h2>
+            </div>
+            
+            <div class="project-grid reveal">
+                <div class="project-main">
+                    <p>
+                        Pwnagotchi is an AI-like, passive WiFi sniffer built on a Raspberry Pi. It uses <strong>Bettercap</strong> to listen for WiFi beaconing, deauthentication and handshake packets, then stores them for offline analysis. It is an excellent learning platform for wireless protocols, RF behaviour and 802.11 frame analysis.
+                    </p>
+                    <p>
+                        This project was built in a fully isolated lab environment to understand how wireless networks advertise themselves, how handshakes are captured, and how those captures can be analysed ethically for defensive awareness.
+                    </p>
+                    
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <strong>Ethical Use Only</strong>
+                            <p>This device was used exclusively on networks I own or in isolated lab environments. Capturing traffic on networks without explicit authorisation is illegal in most jurisdictions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Quick Facts</h3>
+                        <ul class="sidebar-list">
+                            <li><i class="fas fa-microchip"></i> Raspberry Pi Zero W</li>
+                            <li><i class="fas fa-wifi"></i> 802.11b/g/n monitoring</li>
+                            <li><i class="fas fa-battery-full"></i> 5000mAh power bank</li>
+                            <li><i class="fas fa-clock"></i> Built in early 2026</li>
+                            <li><i class="fas fa-shield-alt"></i> Isolated lab only</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">02. Components</span>
+                <h2 class="section-title">Hardware Stack</h2>
+            </div>
+            
+            <div class="components-grid reveal">
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Raspberry Pi Zero W</h3>
+                    <p>Low-cost single-board computer with integrated WiFi and Bluetooth, ideal for portable wireless experiments.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Waveshare 2.13" E-Ink Display</h3>
+                    <p>Low-power screen showing Pwnagotchi's "mood", captured handshakes, uptime and nearby access points.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-sd-card"></i>
+                    </div>
+                    <h3>16GB MicroSD Card</h3>
+                    <p>Flashed with the official Pwnagotchi firmware, plugins and captured handshake storage.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>3D-Printed Case</h3>
+                    <p>Custom enclosure protecting the Pi and display while remaining portable and discreet.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>5000mAh Power Bank</h3>
+                    <p>Provides several hours of autonomous operation for walk-around lab testing.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-usb"></i>
+                    </div>
+                    <h3>USB Data Cable</h3>
+                    <p>For initial flashing, SSH access and transferring captured files to the analysis workstation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">03. Architecture</span>
+                <h2 class="section-title">How It Works</h2>
+            </div>
+            
+            <div class="architecture-diagram reveal">
+                <div class="arch-step">
+                    <div class="arch-number">1</div>
+                    <h3>Scan</h3>
+                    <p>Pwnagotchi scans for nearby 802.11 WiFi access points and clients using the onboard WiFi adapter.</p>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="arch-step">
+                    <div class="arch-number">2</div>
+                    <h3>Capture</h3>
+                    <p>It passively listens for WPA/WPA2 handshake packets and records them to local storage.</p>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="arch-step">
+                    <div class="arch-number">3</div>
+                    <h3>Analyse</h3>
+                    <p>Captured handshakes are transferred to a Kali Linux VM for inspection with Wireshark or Hashcat.</p>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="arch-step">
+                    <div class="arch-number">4</div>
+                    <h3>Learn</h3>
+                    <p>Findings are documented to understand wireless attack vectors and improve defensive detection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">04. Tasks Performed</span>
+                <h2 class="section-title">What I Did</h2>
+            </div>
+            
+            <div class="tasks-grid reveal">
+                <div class="task-card">
+                    <div class="task-number">01</div>
+                    <h3>Firmware Installation</h3>
+                    <p>Downloaded the official Pwnagotchi image, verified its integrity, and flashed it to the MicroSD card using Raspberry Pi Imager.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">02</div>
+                    <h3>Bettercap Configuration</h3>
+                    <p>Tuned Bettercap settings for channel hopping, whitelist management and handshake capture parameters in the lab.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">03</div>
+                    <h3>Plugin Setup</h3>
+                    <p>Configured plugins for auto-update, grid peer tracking, session logging and display customisation.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">04</div>
+                    <h3>Handshake Capture</h3>
+                    <p>Tested WPA2 handshake capture against my own isolated access point to validate the build and understand 4-way handshake structure.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">05</div>
+                    <h3>Packet Analysis</h3>
+                    <p>Exported .pcap files to Wireshark and analysed EAPOL frames, beacon frames and deauthentication patterns.</p>
+                </div>
+                
+                <div class="task-card">
+                    <div class="task-number">06</div>
+                    <h3>Documentation</h3>
+                    <p>Documented the build process, configuration files and lessons learned for future reference and portfolio use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section project-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">05. Key Takeaways</span>
+                <h2 class="section-title">What I Learned</h2>
+            </div>
+            
+            <div class="takeaways reveal">
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>802.11 Frame Structure</h3>
+                        <p>Deepened understanding of management, control and data frames in WiFi networks.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Handshake Mechanics</h3>
+                        <p>Learned how WPA2 4-way handshakes work and why they are valuable for offline analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>RF Behaviour</h3>
+                        <p>Observed how signal strength, channel congestion and nearby devices affect capture success.</p>
+                    </div>
+                </div>
+                
+                <div class="takeaway-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>Linux Embedded Systems</h3>
+                        <p>Gained practical experience configuring headless Raspberry Pi devices over SSH.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section project-section alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">06. Resources</span>
+                <h2 class="section-title">Useful Links</h2>
+            </div>
+            
+            <div class="resources-grid reveal">
+                <a href="https://pwnagotchi.ai/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h3>Pwnagotchi Official</h3>
+                        <p>Documentation, firmware and community guides.</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.bettercap.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-network-wired"></i>
+                    <div>
+                        <h3>Bettercap</h3>
+                        <p>The network attack and monitoring framework powering Pwnagotchi.</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.thingiverse.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-cube"></i>
+                    <div>
+                        <h3>Thingiverse</h3>
+                        <p>3D-printable cases for Raspberry Pi and Pwnagotchi builds.</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.raspberrypi.com/products/raspberry-pi-zero-w/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                    <i class="fas fa-microchip"></i>
+                    <div>
+                        <h3>Raspberry Pi Zero W</h3>
+                        <p>Official product page and specifications.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="section project-cta">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>Explore More Projects</h2>
+                <p>See my Wazuh SIEM lab, network traffic analysis and wireless security work.</p>
+                <a href="index.html#projects" class="btn btn-primary">
+                    <i class="fas fa-th-large"></i> View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🔐</span>
+                    <span>Patrizio Ricciardelli</span>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/PRicciardelli" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://tryhackme.com/p/Payrick" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe"><i class="fas fa-shield-alt"></i></a>
+                    <a href="mailto:patrizio.ricciardelli@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Patrizio Ricciardelli. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
